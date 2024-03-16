@@ -1,0 +1,20 @@
+.card_todo{
+    display: flex;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.card_todo h3{
+    flex: 30%;
+}
+.card_todo p,button{
+    flex: 20%;
+}
+.status_input_div{
+    flex: 30%;
+    display: flex;
+}
+.status_input{
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,146 @@
+.header{
+    position: relative;
+    width: 100%;
+}
+.header_img{
+    width: 100%;
+}
+.header_text{
+    position: absolute;
+    top: 10%; 
+    right: 5%;
+}
+.header_img img{
+    width: 75%;
+    margin-right: 20%;
+}
+.header_text h2{
+    font-size: 80px;
+    color: #12726D;
+}
+.header_button button{
+    width: 55%;
+    font-size: 22px;
+    height: 45px;
+    margin-bottom: 5%;
+
+}
+.header_button_add button{
+    background-color: #39A49E;
+
+
+    color: aliceblue;
+    border-radius: 10px;
+    
+}
+.header_button_task button{
+    background-color: #F89A4E;
+    border-radius: 10px;
+}
+.header_button_add button:hover, .header_button_task button:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+    
+}
+/* =================Dialog add task========== */
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 10;
+    width: 400px;
+    height: 300px;
+    border-style: solid; 
+    border-width: 2px; 
+    border-color: #12726D;
+    border-radius: 15px;
+  
+}
+.dialog_task{
+    display: flex;
+    font-size: 18px;
+    color: #12726D;
+    margin-top: 20px;
+}
+.dialog_task p{
+    margin-right: 20px;
+}
+.dialog_task input{
+    flex: 65%;
+    height: 30px;
+    margin-top: 10px;
+}
+.dialog_addtask{
+    display: flex;
+    margin-top: 30px;
+}
+.dialog_img{
+    width: 150px;
+    margin-left: 20px;
+  
+}
+.dialog_img img {
+    width: 100%;
+}
+.dialog_btn_add{
+    width: 180px;
+}
+.dialog_btn_add button{
+    width: 80%;
+    height: 30px;
+    margin-left: 20%;
+    margin-top: 40%;
+    background-color: #39A49E;
+    color: aliceblue;
+    border-radius: 5px;
+    
+    font-size: 16px;
+}
+.dialog_btn_add button:hover{
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+    background-color: #F89A4E;
+    color: black;
+ 
+    font-size: 18px;
+
+}
+/* =================Body===================== */
+.body_filter{
+    display: flex;
+    background-color: #F89A4E;
+    height: 50px;
+    align-items: center;
+}
+.body_filter h3 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.filter_all, .filter_incomplete, .filter_inprogress, .filter_completed{
+    flex: 25%;
+    height: 100%;
+}
+/* .filter_all :hover, .filter_incomplete :hover, .filter_inprogress :hover, .filter_completed :hover{
+    background-color: #39A49E;
+    color: #F89A4E;
+} */
+.active {
+    background-color: #39A49E; 
+    color: #F89A4E;
+  }
+  
+.body_filter div:hover {
+    background-color: #39A49E;
+    color: #F89A4E;
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+.list_task{
+    margin-bottom: 300px;
+}
