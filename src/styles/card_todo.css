@@ -7,24 +7,41 @@
 .card_todo h3{
     flex: 30%;
     left: 0;
+    font-size: 20px;
 }
+
 .card_todo p{
     margin-right: 20px;
+    font-size: 20px;
     
 }
 .select_status{
     width: 80%;
+    font-size: 20px;
 }
-.btn_delete_task{
+.btn_task{
     flex: 20%;
     height: 30px;
+    display: flex;
 }
 .btn_delete_task img{
   
     width: 30px;
     margin-top: 10px;
+    margin-left: 100px;
+}
+.btn_update_task img{
+  
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 .btn_delete_task img:hover{
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+.btn_update_task img:hover{
     transform: scale(1.1); 
     cursor: pointer; 
     transition: transform 0.3s ease;
@@ -37,3 +54,48 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.select_status option{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.dialog_content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+.dialog_content input{
+    width: 100%;
+    font-size: 20px;
+}
+.dialog_update_btn{
+    display: flex;
+    margin-top: 50px;
+}
+.dialog h3{
+    color:  #12726D;
+    font-size: 20px;
+}
+.btn_update{
+    background-color: #39A49E;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+}
+.btn_cancel{
+    background-color: #F89A4E;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 180px;
+    margin-left: 20px;
+}
+.btn_update:hover, .btn_cancel:hover{
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+  

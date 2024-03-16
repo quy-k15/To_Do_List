@@ -31,6 +31,7 @@
 
     color: aliceblue;
     border-radius: 10px;
+ 
     
 }
 .header_button_task button{
@@ -68,11 +69,13 @@
 }
 .dialog_task p{
     margin-right: 20px;
+    font-size: 20px;
 }
 .dialog_task input{
     flex: 65%;
     height: 30px;
     margin-top: 10px;
+    font-size: 20px;
 }
 .dialog_addtask{
     display: flex;
@@ -88,6 +91,8 @@
 }
 .dialog_btn_add{
     width: 180px;
+    font-size: 20px;
+    height: 50px;
 }
 .dialog_btn_add button{
     width: 80%;
@@ -97,8 +102,9 @@
     background-color: #39A49E;
     color: aliceblue;
     border-radius: 5px;
+    height: 50px;
     
-    font-size: 16px;
+    font-size: 20px;
 }
 .dialog_btn_add button:hover{
     transform: scale(1.1); 
@@ -107,7 +113,7 @@
     background-color: #F89A4E;
     color: black;
  
-    font-size: 18px;
+    font-size: 22px;
 
 }
 .dialog_close_btn{

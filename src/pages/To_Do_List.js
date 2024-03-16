@@ -43,6 +43,16 @@ function To_Do_List() {
       bodyFilterRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const updateTaskName = (id, newName) => {
+    setTasks(tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, name: newName };
+      }
+      return task;
+    }));
+  };
+  
+
   
 
   return (
@@ -104,6 +114,7 @@ function To_Do_List() {
               status={task.status}
               onChangeStatus={onChangeStatus}
               onDelete={() => deleteTask(task.id)}
+              onUpdate={updateTaskName}
             />
           ))}
         </div>

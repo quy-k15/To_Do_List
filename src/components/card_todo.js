@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState , useRef } from "react";
 import "../styles/card_todo.css"
 import img_delete from "../images/img_delete.png"
+import img_update from "../images/img_update.png"
 
-function Card_ToDo({ id, name, status, onChangeStatus, onDelete }) {
+function Card_ToDo({ id, name, status, onChangeStatus, onDelete, onUpdate }) {
   const backgroundColor = getStatusBackgroundColor(status);
+  const [isUpdateDialogOpen, setIsUpdateDialogOpen] = useState(false);
+  const [newName, setNewName] = useState(name);
+
+ 
+  const openUpdateDialog = () => {
+    setIsUpdateDialogOpen(true);
+  };
+
+  const closeUpdateDialog = () => {
+    setIsUpdateDialogOpen(false);
+  };
+
+  const handleNameUpdate = () => {
+    onUpdate(id, newName); 
+    closeUpdateDialog();
+  };
   return (
     <div className="card_todo" style={{ backgroundColor: backgroundColor }}>
+    
       <h3>Task: {name}</h3>
     
       <div className="status_input_div">
@@ -18,9 +36,33 @@ function Card_ToDo({ id, name, status, onChangeStatus, onDelete }) {
       </select>
 
       </div>
-      <div className="btn_delete_task">
-        <img onClick={onDelete} src={img_delete} alt=""/>
+      <div className="btn_task">
+        <div className="btn_delete_task">
+          <img onClick={onDelete} src={img_delete} alt=""/>
+        </div>
+        <div className="btn_update_task">
+          <img onClick={openUpdateDialog} src={img_update} alt=""/>
+        </div>
+        {isUpdateDialogOpen && (
+        <div className="dialog">
+          <h3>Update Task</h3>
+          <div className="dialog_content">
+            <input
+              type="text"
+              value={newName}
+              onChange={(e) => setNewName(e.target.value)}
+            />
+          </div>
+          <div className="dialog_update_btn">
+            <button className="btn_update"onClick={handleNameUpdate}>Update Task</button>
+            <button className="btn_cancel" onClick={closeUpdateDialog}>Cancel</button>
+          </div>
+    
+        </div>
+      )}
+
       </div>
+    
       
     </div>
   );
