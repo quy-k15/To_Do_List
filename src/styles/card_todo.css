@@ -6,9 +6,28 @@
 }
 .card_todo h3{
     flex: 30%;
+    left: 0;
 }
-.card_todo p,button{
+.card_todo p{
+    margin-right: 20px;
+    
+}
+.select_status{
+    width: 80%;
+}
+.btn_delete_task{
     flex: 20%;
+    height: 30px;
+}
+.btn_delete_task img{
+  
+    width: 30px;
+    margin-top: 10px;
+}
+.btn_delete_task img:hover{
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
 }
 .status_input_div{
     flex: 30%;

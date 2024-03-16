@@ -110,6 +110,31 @@
     font-size: 18px;
 
 }
+.dialog_close_btn{
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.dialog_close_btn button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: #F89A4E;
+    font-size: 20px;
+    border-style: solid; 
+    border-width: 2px; 
+    border-radius: 5px;
+
+}
+.dialog_close_btn button:hover{
+    transform: scale(1.1); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
 /* =================Body===================== */
 .body_filter{
     display: flex;
@@ -118,6 +143,7 @@
     align-items: center;
 }
 .body_filter h3 {
+ 
     margin-top: 15px;
     margin-bottom: 0px;
 }
@@ -144,3 +170,27 @@
 .list_task{
     margin-bottom: 300px;
 }
+.clear_all_button {
+    text-align: center;
+    margin-top: 10px;
+   
+
+}
+  
+.clear_all_button > button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff6868; 
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 4px;
+
+}
+  
+.clear_all_button > button:hover {
+    background-color: #ff4c4c;
+}
+  

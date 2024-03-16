@@ -3,13 +3,17 @@ import Card_ToDo from "../components/card_todo";
 import img_what_work from "../images/img_what_work.gif";
 import img_working from "../images/img_working.png"
 import "../styles/To_Do_List.css";
+import Header from "../components/header";
 
 function To_Do_List() {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const bodyFilterRef = useRef(null);
-
+  const clearAllTasks = () => {
+    setTasks([]);
+  };
+  
 
   const addTask = () => {
     if (!input.trim()) return;
@@ -43,6 +47,7 @@ function To_Do_List() {
 
   return (
     <div className="To_Do_List_Page">
+      <Header/>
       <div className="header"> 
         <div className="header_img">
           <img src={img_what_work} alt="What to work on"/>
@@ -60,6 +65,9 @@ function To_Do_List() {
         </div>
         {isDialogOpen && (
         <div className="dialog">
+          <div className="dialog_close_btn">
+            <button onClick={toggleDialog}>X</button>
+          </div>
          
           <div>
             <div className="dialog_task"> 
@@ -99,6 +107,10 @@ function To_Do_List() {
             />
           ))}
         </div>
+        <div className="clear_all_button">
+          <button onClick={clearAllTasks}>Clear All Tasks</button>
+        </div>
+
 
 
 

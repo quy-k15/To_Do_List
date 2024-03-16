@@ -1,21 +1,27 @@
 import React from "react";
 import "../styles/card_todo.css"
+import img_delete from "../images/img_delete.png"
 
 function Card_ToDo({ id, name, status, onChangeStatus, onDelete }) {
   const backgroundColor = getStatusBackgroundColor(status);
   return (
     <div className="card_todo" style={{ backgroundColor: backgroundColor }}>
-      <h3>{name}</h3>
-      <p>Status:</p>
+      <h3>Task: {name}</h3>
+    
       <div className="status_input_div">
-      <select value={status} onChange={(e) => onChangeStatus(id, e.target.value)}>
+        <p> Status:</p>
+     
+      <select className="select_status"value={status} onChange={(e) => onChangeStatus(id, e.target.value)}>
         <option value="Incomplete">Incomplete</option>
         <option value="In Progress">In Progress</option>
         <option value="Completed">Completed</option>
       </select>
 
       </div>
-      <button onClick={onDelete}>Delete</button>
+      <div className="btn_delete_task">
+        <img onClick={onDelete} src={img_delete} alt=""/>
+      </div>
+      
     </div>
   );
 }
